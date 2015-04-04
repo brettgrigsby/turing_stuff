@@ -3,7 +3,6 @@ require 'Prime' #Prime is a ruby class that allows us to find prime numbers
 class Raindrops
   def self.convert(number)
     drop_speak = [] #an array to hold our sounds
-    has_primes = 0 #keeps track of whether our number has prime factors
     
     factors = Prime.prime_division(number) #finds prime factors and puts them into an array of 2-element arrays
 
