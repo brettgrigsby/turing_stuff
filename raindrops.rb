@@ -1,4 +1,4 @@
-require 'Prime'
+require 'Prime' #Prime is a ruby class that allows us to find prime numbers
 
 class Raindrops
   def self.convert(number)
