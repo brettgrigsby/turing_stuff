@@ -9,20 +9,17 @@ class Raindrops
 
     if factors.flatten.include?(3) #we flatten so the array of arrays becomes just 1 array that .include? can search
       drop_speak << "Pling"
-      has_primes += 1
     end
 
     if factors.flatten.include?(5)
       drop_speak << "Plang"
-      has_primes += 1
     end
 
     if factors.flatten.include?(7)
       drop_speak << "Plong"
-      has_primes += 1
     end
 
-    if has_primes == 0 #no prime factors so pass through the original number
+    if drop_speak.empty? #no prime factors so pass through the original number
       number.to_s
     else
       drop_speak.join #there ARE prime factors so ouput the corresponding sounds
