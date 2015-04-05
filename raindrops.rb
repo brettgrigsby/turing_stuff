@@ -23,7 +23,6 @@ class Raindrops
     else
       drop_speak.join #there ARE prime factors so ouput the corresponding sounds
     end
-
   end
 end
 
