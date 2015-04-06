@@ -1,4 +1,4 @@
-puts "Enter sequnce length:"
+puts "Enter sequence length:"
 quantity = gets.to_i
 sequence = [ 0, 1]
 
