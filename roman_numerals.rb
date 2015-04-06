@@ -10,23 +10,19 @@ class Fixnum
     remainder = num_set[0] % 5
 
 
-    if num_set[0] >= 4
-      let_key += 1
-    elsif num_set[0] < 4
-      remainder -= 1
-    end
-
-    if num_set[0] == 9
+    if num_set[0] < 4
+      remainder.times { output << letters[let_key] }
+    elsif num_set[0] == 4
+      output << letters[let_key]
       output << letters[let_key + 1]
+    elsif num_set[0] == 5
+      output << letters[let_key + 1]
+    elsif num_set[0] > 5 && num_set[0] != 9
+      output << letters[let_key + 1]
+      remainder.times { output << letters[let_key] }
     else
       output << letters[let_key]
-    end
-
-
-    if remainder == 4
-      output.unshift(letters[let_key - 1])
-    else
-      remainder.times { output << letters[let_key - 1]}
+      output << letters[let_key + 2]
     end
 
     output.join
